@@ -6,7 +6,7 @@
 
 html {
   /* background: linear-gradient(#46a8bd, #5a557e); */
-  background-color: #46a8bd;
+  background-color: #73d5eb;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -14,7 +14,7 @@ html {
 }
 
 .weather-now {
-  background-color: rgba(117, 190, 218, 1);
+  background-color: rgb(37, 52, 139);
   color: rgb(228, 230, 241);
   width: 260px;
   display: flex;
@@ -35,6 +35,6 @@ input {
   border: none;
   outline: none;
   border-bottom: 1px solid white;
-  background-color: #46a8bd;
+  background-color: #73d5eb;
   /* color: white; */
 }

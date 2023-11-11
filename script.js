@@ -8,6 +8,7 @@ const detailsEl = document.querySelector(".details");
 const minTempEl = document.querySelector(".min-temperature");
 const maxTempEl = document.querySelector(".max-temperature");
 const weatherNowContainerEl = document.querySelector(".weather-now");
+const iconEl = document.querySelector(".icon");
 
 const currentWeatherURL =
   "https://api.openweathermap.org/data/2.5/weather?appid=69518b1f8f16c35f8705550dc4161056&units=metric&q=";
@@ -18,6 +19,8 @@ searchBtnEl.addEventListener("click", () => {
     showCurrentWeather(location);
   }
 });
+
+const iconWeatherURL = "http://openweathermap.org/img/w/";
 
 function showCurrentWeather(location) {
   const url = `${currentWeatherURL}${location}`;
@@ -33,6 +36,7 @@ function showCurrentWeather(location) {
       maxTempEl.innerHTML = `Maximum temperature: ${data.main.temp_min}° C`;
       for (const item of data.weather) {
         detailsEl.innerHTML = item.description;
+        iconEl.innerHTML = ` <img src="${iconWeatherURL}${item.icon}.png"alt=""></img>`;
       }
     });
 }
